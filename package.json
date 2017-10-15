@@ -1,7 +1,7 @@
 {
   "name": "forismatic",
   "version": "1.0.0",
-  "description": "A Forismatic API client/slack bot for an inspirational quotes.",
+  "description": "Forismatic API client/slack bot for an inspirational quotes.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
