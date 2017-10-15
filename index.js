@@ -3,7 +3,7 @@ const forismatic = require('./forismatic')
 
 forismatic.options({
   format : 'xml',
-  lang : 'ru',
+  lang : 'en',
   key : 1333
 }).quote((err, quote) => {
 	if(err) {
