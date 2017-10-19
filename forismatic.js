@@ -4,6 +4,7 @@ const querystring = require('querystring')
 class Forismatic {
 
 	constructor() {
+    console.log("initializing")
 		this._formats = ['json', 'xml', 'jsonp', 'html', 'text']
     this._methods = ['getQuote']
     this._langs = ['en', 'ru']
@@ -13,6 +14,14 @@ class Forismatic {
 			lang : 'en'
 		}
 	}
+
+  resetOptions() {
+    this._options = {
+      method : 'getQuote',
+      format : 'json',
+      lang : 'en'
+    }
+  }
 
   /* override default options */
 	options(options) {
@@ -74,8 +83,12 @@ class Forismatic {
 
 		req.write(postData)
 
-		req.end();
+		req.end()
 	}
+
+  getOptions() {
+    return this._options
+  }
 
   isValidLang(lang) {
     return this._langs.indexOf(lang) > 0
